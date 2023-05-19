@@ -1,0 +1,18 @@
+[package]
+name = "HyperOracle_coding"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+name = "halo2_examples"
+path = "src/lib.rs"
+
+[features]
+dev-graph = ["halo2_proofs/dev-graph", "plotters"]
+
+[dependencies]
+halo2_proofs = { git = "https://github.com/zcash/halo2.git", version = "0.2.0", rev = "96d9bde905a20117b4350ffba0b0a6479aa63f0a" }
+plotters = { version = "0.3.4", optional = true }
+tabbycat = { version = "0.1", features = ["attributes"], optional = true }
